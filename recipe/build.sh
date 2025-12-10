@@ -20,7 +20,7 @@ cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net8.0/**/bicep.dll ${PREFIX}/libexec/${
 cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net8.0/**/bicep.runtimeconfig.json ${PREFIX}/libexec/${PKG_NAME}
 
 tee ignored_packages.json << EOF
-["CommandLineParser", "Microsoft.AspNet.WebApi.Client", "Microsoft.Graph.Bicep.Types","OmniSharp.Extensions*"]
+["CommandLineParser", "Microsoft.AspNet.WebApi.Client", "Microsoft.Graph.Bicep.Types","OmniSharp.Extensions*", "Microsoft.Azure.Cosmos"]
 EOF
 dotnet-project-licenses --input src/Bicep.Cli/Bicep.Cli.csproj -t -d license-files_bicep -ignore ignored_packages.json
 dotnet-project-licenses --input src/Bicep.LangServer/Bicep.LangServer.csproj -t -d license-files_bicep-langserver -ignore ignored_packages.json
