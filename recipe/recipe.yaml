@@ -8,7 +8,7 @@ package:
 source:
   - git: https://github.com/Azure/bicep
     tag: v${{ version }}
-    target_directory: src
+    target_directory: git
   - url: https://github.com/Azure/bicep/archive/refs/tags/v${{ version }}.tar.gz
     sha256: f74437071a4ce5982ee2e9f3fb2c1e8399db9d561e1884a5bfdca52118924307
 
