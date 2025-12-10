@@ -16,8 +16,8 @@ dotnet publish --no-self-contained src/Bicep.LangServer/Bicep.LangServer.csproj 
 rm -rf ${PREFIX}/libexec/${PKG_NAME}/runtimes/*
 rm -rf ${PREFIX}/libexec/${PKG_NAME}/bicep
 rm -rf ${PREFIX}/libexec/${PKG_NAME}/Bicep.LangServer
-cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net8.0/**/bicep.dll ${PREFIX}/libexec/${PKG_NAME}
-cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net8.0/**/bicep.runtimeconfig.json ${PREFIX}/libexec/${PKG_NAME}
+cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net${framework_version}/**/bicep.dll ${PREFIX}/libexec/${PKG_NAME}
+cp ${SRC_DIR}/src/Bicep.Cli/bin/Release/net${framework_version}/**/bicep.runtimeconfig.json ${PREFIX}/libexec/${PKG_NAME}
 
 tee ignored_packages.json << EOF
 ["CommandLineParser", "Microsoft.AspNet.WebApi.Client", "Microsoft.Graph.Bicep.Types","OmniSharp.Extensions*", "Microsoft.Azure.Cosmos"]
