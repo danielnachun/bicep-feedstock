@@ -31,8 +31,8 @@ about:
   license: MIT
   license_file:
     - LICENSE
-    - src/license-files_bicep/
-    - src/license-files_bicep-langserver/
+    - git/license-files_bicep/
+    - git/license-files_bicep-langserver/
   summary: Bicep is a declarative language for describing and deploying Azure resources
   homepage: https://github.com/Azure/bicep
   repository: https://github.com/Azure/bicep
