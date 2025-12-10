@@ -7,7 +7,6 @@ mkdir -p ${PREFIX}/libexec/${PKG_NAME}
 ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
-cd git
 rm -rf global.json
 git remote set-url origin https://github.com/Azure/bicep
 

@@ -8,9 +8,9 @@ package:
 source:
   - git: https://github.com/Azure/bicep
     tag: v${{ version }}
-    target_directory: git
   - url: https://github.com/Azure/bicep/archive/refs/tags/v${{ version }}.tar.gz
     sha256: f74437071a4ce5982ee2e9f3fb2c1e8399db9d561e1884a5bfdca52118924307
+    target_directory: archive
 
 build:
   noarch: generic
@@ -31,8 +31,8 @@ about:
   license: MIT
   license_file:
     - LICENSE
-    - git/license-files_bicep/
-    - git/license-files_bicep-langserver/
+    - license-files_bicep/
+    - license-files_bicep-langserver/
   summary: Bicep is a declarative language for describing and deploying Azure resources
   homepage: https://github.com/Azure/bicep
   repository: https://github.com/Azure/bicep
